@@ -1,0 +1,37 @@
+.box-1 {
+  margin: 10px;
+  border: 10px solid;
+}
+
+.box-2 {
+  margin: 10px;
+  border: 10px solid;
+  display: flex;
+}
+
+.box-3 {
+  margin: 10px;
+  border: 10px solid;
+}
+
+.section-1 {
+  background-color: rgb(49, 102, 102);
+  display: flex;
+  border-bottom: 5px solid;
+}
+
+.section-2 {
+  background-color: rgb(184, 117, 62);
+  display: flex;
+}
+
+.section-3 {
+}
+
+.section-4 {
+}
+
+.inner-element {
+  height: 10px;
+  margin: 10px;
+}
