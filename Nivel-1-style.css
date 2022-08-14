@@ -1,37 +1,54 @@
 .box-1 {
   margin: 10px;
   border: 10px solid;
+  margin: 10px;
 }
 
+.section-1 {
+  background-color: rgb(49, 102, 102);
+  padding: 10px;
+  display: flex;
+  border-bottom: 5px solid;
+  gap: 10px;
+}
+
+.section-2 {
+  background-color: rgb(184, 117, 62);
+  padding: 10px;
+  display: flex;
+}
+
+/* ---------------------------- */
 .box-2 {
   margin: 10px;
   border: 10px solid;
   display: flex;
 }
 
-.box-3 {
-  margin: 10px;
-  border: 10px solid;
-}
-
-.section-1 {
-  background-color: rgb(49, 102, 102);
-  display: flex;
-  border-bottom: 5px solid;
-}
-
-.section-2 {
-  background-color: rgb(184, 117, 62);
-  display: flex;
-}
-
 .section-3 {
+  background-color: rgb(43, 75, 75);
+  flex: 7;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .section-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: rgb(184, 62, 62);
+  flex: 3;
+  padding: 10px;
 }
 
 .inner-element {
   height: 10px;
+  /* margin: 10px; */
+}
+
+.box-3 {
   margin: 10px;
+  border: 10px solid;
 }
