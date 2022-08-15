@@ -1,54 +1,134 @@
+.body {
+  max-width: 1200px;
+}
+
 .box-1 {
-  margin: 10px;
-  border: 10px solid;
-  margin: 10px;
+  margin: 20px;
+  border: 20px solid;
 }
 
 .section-1 {
-  background-color: rgb(49, 102, 102);
-  padding: 10px;
+  background-color: #27394e;
+  padding: 20px;
   display: flex;
-  border-bottom: 5px solid;
-  gap: 10px;
+  border-bottom: 10px solid;
+  gap: 20px;
+}
+
+div.section-1 > * {
+  background-color: #ea584b;
+  flex: 1;
+}
+
+#a2 {
+  flex: 3;
+}
+
+@media screen and (max-width: 600px) {
+  .section-1 {
+    flex-direction: column;
+  }
+  #a1,
+  #a2,
+  #a3 {
+    flex: none;
+    width: 100%;
+  }
 }
 
 .section-2 {
-  background-color: rgb(184, 117, 62);
-  padding: 10px;
+  background-color: #f0763a;
+  padding: 20px;
   display: flex;
+}
+div.section-2 > * {
+  background-color: #ffcc5e;
+  flex: 1;
 }
 
 /* ---------------------------- */
+
 .box-2 {
-  margin: 10px;
-  border: 10px solid;
+  margin: 20px;
+  border: 20px solid;
   display: flex;
 }
 
+@media screen and (max-width: 768px) {
+  .box-2 {
+    flex-direction: column;
+    border-color: yellow;
+  }
+}
 .section-3 {
-  background-color: rgb(43, 75, 75);
+  padding: 20px;
+  background-color: #44465e;
   flex: 7;
-  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  border-right: 20px solid;
+}
+
+@media screen and (max-width: 768px) {
+  .section-3 {
+    border-right: 0px;
+    border-bottom: 20px solid;
+    border-color: yellow;
+  }
+}
+
+.container-1 {
+  display: flex;
+  gap: 20px;
+}
+
+.blue-element {
+  background-color: #1664a4;
+  flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .container-1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .blue-element {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.light-blue-element {
+  background-color: #6399bb;
 }
 
 .section-4 {
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  background-color: rgb(184, 62, 62);
+  gap: 10px;
+  background-color: #f94c47;
   flex: 3;
-  padding: 10px;
 }
 
-.inner-element {
-  height: 10px;
-  /* margin: 10px; */
+.yellow-crayola-element {
+  background-color: #f9c851;
 }
+
+/* ---------------------------- */
 
 .box-3 {
-  margin: 10px;
-  border: 10px solid;
+  margin: 20px;
+  border: 20px solid;
+}
+
+.gold-metallic-element {
+  background-color: #e4a434;
+}
+
+/* ---------------------------- */
+
+.inner-element {
+  height: 20px;
 }
