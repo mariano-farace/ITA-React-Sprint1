@@ -1,0 +1,162 @@
+body {
+  max-width: 1200px;
+}
+
+.box-1 {
+  margin: 20px;
+  border: 20px solid;
+}
+
+.section-1 {
+  background-color: #27394e;
+  padding: 20px;
+  display: flex;
+  border-bottom: 10px solid;
+  gap: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.section-1 > * {
+  background-color: #ea584b;
+  flex: 1;
+}
+
+#a2 {
+  flex: 5;
+}
+
+.nav-items,
+.social-link-list {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  color: #3f729e;
+  text-decoration: none;
+  padding-inline-start: 0px;
+}
+
+ul {
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .section-1 {
+    flex-direction: column;
+  }
+  #a1,
+  #a2,
+  #a3 {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.section-2 {
+  background-color: #f0763a;
+  padding: 20px;
+  display: flex;
+}
+div.section-2 > * {
+  background-color: #ffcc5e;
+  flex: 1;
+}
+
+/* ---------------------------- */
+
+.box-2 {
+  margin: 20px;
+  border: 20px solid;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .box-2 {
+    flex-direction: column;
+    border-color: yellow;
+  }
+}
+.section-3 {
+  padding: 20px;
+  background-color: #44465e;
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 20px solid;
+}
+
+@media screen and (max-width: 768px) {
+  .section-3 {
+    border-right: 0px;
+    border-bottom: 20px solid;
+    border-color: yellow;
+  }
+}
+
+.container-1 {
+  display: flex;
+  gap: 20px;
+}
+
+.blue-element {
+  background-color: #1664a4;
+  flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .container-1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .blue-element {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.light-blue-element {
+  background-color: #6399bb;
+}
+
+.section-4 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f94c47;
+  flex: 3;
+}
+
+.yellow-crayola-element {
+  background-color: #f9c851;
+}
+
+/* ---------------------------- */
+
+.box-3 {
+  margin: 20px;
+  border: 20px solid;
+}
+
+.gold-metallic-element {
+  background-color: #e4a434;
+}
+
+/* ---------------------------- */
+
+.inner-element {
+  height: 20px;
+}
