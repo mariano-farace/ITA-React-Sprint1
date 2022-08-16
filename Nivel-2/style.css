@@ -5,11 +5,10 @@ body {
 .box-1 {
   margin: 20px;
   background-image: url("assets/header.jpg");
-  background-size: 200%;
+  background-size: cover;
   /*TODO hacer que la BI no se expanda ni contraiga */
   background-repeat: no-repeat;
   background-position: center;
-  background-position-y: center;
   height: 100%;
 }
 
