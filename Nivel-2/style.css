@@ -7,14 +7,13 @@
 .box-1 {
   margin: 0 35px 8px 35px;
   background-image: url("assets/header.jpg");
-  background-size: cover;
+  background-size: auto 320%;
   /*TODO hacer que la BI no se expanda ni contraiga */
   background-repeat: no-repeat;
   background-position: center;
-  height: 260px;
+  height: 225px;
   display: flex;
   flex-direction: column;
-
   /* object-fit: fill;
   width: 100%;
   height: 200px;
@@ -72,7 +71,6 @@ a:hover {
   flex: 1 1 auto;
   padding: 0px 20px 0px 20px;
   display: flex;
-  /* height: calc(100% - 260px); */
   align-items: flex-end;
   justify-content: center;
 }
