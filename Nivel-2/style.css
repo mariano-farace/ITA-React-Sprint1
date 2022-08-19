@@ -212,26 +212,14 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
-  body {
-    background-color: aqua;
-  }
-  .section-3 {
-    background-color: yellow;
-  }
   .section-1 {
     flex-direction: column;
   }
   .articles-container {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
   .article {
-    width: 95%;
+    width: auto;
   }
 }
-
-/* 
-.articles-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-} */
