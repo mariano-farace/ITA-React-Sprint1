@@ -84,7 +84,7 @@ a:hover {
   text-align: center;
   /*TODO hacer que el tamaño del text se adapte */
   color: rgb(244, 155, 122, 0.9);
-  font-size: 150%;
+  font-size: 4vh;
   padding-top: 20px;
 }
 
