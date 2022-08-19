@@ -1,19 +1,29 @@
-body {
+.main-container {
   max-width: 1200px;
+  margin: 0px auto;
 }
 
+/*TODO centrar todo lo que esta dentro del body!! */
 .box-1 {
-  margin: 20px;
+  margin: 0 35px 8px 35px;
   background-image: url("assets/header.jpg");
   background-size: cover;
   /*TODO hacer que la BI no se expanda ni contraiga */
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+
+  /* object-fit: fill;
+  width: 100%;
+  height: 200px;
+  object-fit: cover; */
 }
 
 .section-1 {
   padding: 20px;
+  padding-top: 40px;
   display: flex;
   gap: 20px;
 }
@@ -34,6 +44,7 @@ div.section-1 > * {
 
 .nav-items,
 .social-link-list {
+  font-size: 0.7em;
   display: flex;
   list-style-type: none;
   flex-direction: row;
@@ -48,7 +59,7 @@ div.section-1 > * {
 }
 
 a {
-  color: #3f729e;
+  color: #808080;
   text-decoration: none;
   padding-inline-start: 0px;
 }
@@ -66,30 +77,30 @@ a {
 }
 
 .section-2 {
+  flex: 1 1 auto;
   padding: 0px 20px 0px 20px;
   display: flex;
-  height: 130px;
+  /* height: calc(100% - 260px); */
   align-items: flex-end;
   justify-content: center;
 }
 
 .transparent-rectangle {
   width: 95%;
-  height: 50%;
+  height: 45%;
   background-color: rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   /*TODO hacer que el tamaño del text se adapte */
-  color: #f49b7a;
-  font-size: 2em;
+  color: rgb(244, 155, 122, 0.9);
+  font-size: 1.5em;
+  padding-top: 20px;
 }
 
 /* ---------------------------- */
 
 .box-2 {
-  margin: 20px;
-  border: 20px solid;
+  margin: 0 35px 8px 35px;
+  gap: 8px;
   display: flex;
 }
 
@@ -100,13 +111,12 @@ a {
   }
 }
 .section-3 {
-  padding: 20px;
-  background-color: #44465e;
-  flex: 7;
+  padding: 7px;
+  flex: 8;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-right: 20px solid;
+  background-color: #d8d7d7;
 }
 
 @media screen and (max-width: 768px) {
@@ -122,9 +132,56 @@ a {
   gap: 20px;
 }
 
-.blue-element {
-  background-color: #1664a4;
+.article {
   flex: 1;
+  position: relative;
+  background-color: #f5f1f1;
+  padding: 10px;
+  width: 200px;
+}
+
+.pic-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/1;
+}
+
+.article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pic-date {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: #eada8f;
+  font-size: 0.75em;
+  font-weight: 550;
+}
+
+.article-title {
+  font-size: 1em;
+  font-weight: 550;
+  background-color: #f08080;
+  padding-left: 5px;
+  padding-top: 8px;
+  color: white;
+}
+
+.article-body {
+  column-count: 2;
+  font-size: 0.73em;
+  font-weight: 300;
+  column-gap: 15px;
+  margin: 20px 5px;
+  color: #585858;
+}
+
+.article-link {
+  margin-left: 5px;
+  color: #959494;
 }
 
 @media screen and (max-width: 600px) {
@@ -138,36 +195,44 @@ a {
   }
 }
 
-.light-blue-element {
-  background-color: #6399bb;
-}
-
 .section-4 {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: #f94c47;
-  flex: 3;
+  background-color: #d8d7d7;
+  flex: 2;
 }
 
-.yellow-crayola-element {
-  background-color: #f9c851;
+.articles-footer {
+  text-align: center;
+  font-size: 0.73em;
+}
+
+.rc-title {
+  font-weight: 800;
+  margin: 10px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.rc-body {
+  text-align: center;
+  font-size: 0.8em;
 }
 
 /* ---------------------------- */
 
 .box-3 {
-  margin: 20px;
-  border: 20px solid;
+  margin: 0 35px 20px 35px;
+  background-color: #d8d7d7;
+  padding: 0px 8px;
 }
 
-.gold-metallic-element {
-  background-color: #e4a434;
+.footer-text {
+  text-align: center;
+  padding: 5px 0px;
+  background-color: #f5f1f1;
 }
 
 /* ---------------------------- */
-
-.inner-element {
-  height: 20px;
-}
