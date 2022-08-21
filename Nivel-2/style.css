@@ -1,8 +1,24 @@
+:root {
+  --bg-grey: #d8d7d7;
+  --bg-light-grey: #f5f1f1;
+  --navigation-icon-grey: #808080;
+  --main-title-orange: rgb(244, 155, 122, 0.9);
+  --date-text: #eada8f;
+  --article-title-red: #f08080;
+  --article-body-text-grey: #585858;
+  --article-link-text-grey: #959494;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+/* //TODO hacer que al achicar la pantalla en el eje x, no se permita overflow del contenido, en cierto punto tiene que  simplemente dejarse de ver parte del contenido y no hacerlo un chorizo infinitamente */
+
 .main-container {
   max-width: 1200px;
   margin: 0px auto;
 }
-
 /*TODO centrar todo lo que esta dentro del body!! */
 .box-1 {
   margin: 0 35px 8px 35px;
@@ -14,10 +30,6 @@
   height: 225px;
   display: flex;
   flex-direction: column;
-  /* object-fit: fill;
-  width: 100%;
-  height: 200px;
-  object-fit: cover; */
 }
 
 .section-1 {
@@ -43,7 +55,8 @@ div.section-1 > * {
 
 .nav-items,
 .social-link-list {
-  font-size: 0.7em;
+  /* TODO cuando haces shrink los iconos se apila mucho, y despues pasan a tener el texto abajo, tenes que hacer que eso pase antes de que se apilen tanto */
+  font-size: 0.9em;
   display: flex;
   list-style-type: none;
   flex-direction: row;
@@ -58,7 +71,7 @@ div.section-1 > * {
 }
 
 a {
-  color: #808080;
+  color: var(--navigation-icon-grey);
   text-decoration: none;
   padding-inline-start: 0px;
 }
@@ -76,12 +89,13 @@ a:hover {
 }
 
 .transparent-rectangle {
+  font-family: "IM Fell Great Primer", serif;
   width: 95%;
   height: 45%;
   background-color: rgba(0, 0, 0, 0.1);
   text-align: center;
   /*TODO hacer que el tamaño del text se adapte */
-  color: rgb(244, 155, 122, 0.9);
+  color: var(--main-title-orange);
   font-size: 4vh;
   padding-top: 20px;
 }
@@ -100,7 +114,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: #d8d7d7;
+  background-color: var(--bg-grey);
 }
 
 .articles-container {
@@ -112,7 +126,7 @@ a:hover {
 .article {
   flex: 40%;
   position: relative;
-  background-color: #f5f1f1;
+  background-color: var(--bg-light-grey);
   padding: 10px;
   width: 200px;
 }
@@ -133,15 +147,16 @@ a:hover {
   position: absolute;
   bottom: 5px;
   left: 5px;
-  color: #eada8f;
+  color: var(--date-text);
   font-size: 0.75em;
   font-weight: 550;
 }
 
 .article-title {
+  font-family: "Inconsolata", monospace;
   font-size: 1em;
   font-weight: 550;
-  background-color: #f08080;
+  background-color: var(--article-title-red);
   padding-left: 5px;
   padding-top: 8px;
   color: white;
@@ -153,12 +168,12 @@ a:hover {
   font-weight: 300;
   column-gap: 15px;
   margin: 20px 5px;
-  color: #585858;
+  color: var(--article-body-text-grey);
 }
 
 .article-link {
   margin-left: 5px;
-  color: #959494;
+  color: var(--article-link-text-grey);
 }
 
 .section-4 {
@@ -166,7 +181,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: #d8d7d7;
+  background-color: var(--bg-grey);
   flex: 2;
 }
 
@@ -191,14 +206,16 @@ a:hover {
 
 .box-3 {
   margin: 0 35px 20px 35px;
-  background-color: #d8d7d7;
+  background-color: var(--bg-grey);
   padding: 0px 8px;
 }
 
 .footer-text {
+  font-size: 0.73em;
+  color: #585858;
   text-align: center;
   padding: 5px 0px;
-  background-color: #f5f1f1;
+  background-color: var(--bg-light-grey);
 }
 
 /* ---------------------------- */
@@ -207,9 +224,19 @@ a:hover {
   .box-2 {
     flex-direction: column;
   }
+  .transparent-rectangle {
+    font-size: 3vh;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .box-1,
+  .box-2,
+  .box-3 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .section-1 {
     flex-direction: column;
   }
