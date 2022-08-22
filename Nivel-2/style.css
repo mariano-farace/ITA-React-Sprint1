@@ -23,7 +23,7 @@ html {
 }
 .box-1 {
   margin: 0 35px 8px 35px;
-  background-image: url("assets/header.jpg");
+  background-image: url("../assets/header.jpg");
   background-size: auto 350%;
   background-repeat: no-repeat;
   background-position: 50% 52%;
