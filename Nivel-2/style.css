@@ -15,16 +15,16 @@ html {
 
 /* //TODO hacer que al achicar la pantalla en el eje x, no se permita overflow del contenido, en cierto punto tiene que  simplemente dejarse de ver parte del contenido y no hacerlo un chorizo infinitamente */
 
+/* !Pregunta: fijate que el responsive no se comporta de la misma manera si achicas la pantalla a un ancho de X pixeles que si elegis un telefono de ancho X pixeles. Por que???? */
+
 .main-container {
   max-width: 1200px;
   margin: 0px auto;
 }
-/*TODO centrar todo lo que esta dentro del body!! */
 .box-1 {
   margin: 0 35px 8px 35px;
   background-image: url("assets/header.jpg");
   background-size: auto 350%;
-  /*TODO hacer que la BI no se expanda ni contraiga */
   background-repeat: no-repeat;
   background-position: 50% 52%;
   height: 225px;
@@ -43,6 +43,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fromLToR 1s ease-in;
 }
 
 div.section-1 > * {
@@ -68,6 +69,7 @@ div.section-1 > * {
   padding: 0;
   margin-block-start: 0;
   margin-block-end: 0;
+  animation: fallFromTop 1s ease-in;
 }
 
 a {
@@ -94,7 +96,6 @@ a:hover {
   height: 45%;
   background-color: rgba(0, 0, 0, 0.1);
   text-align: center;
-  /*TODO hacer que el tamaño del text se adapte */
   color: var(--main-title-orange);
   font-size: 4vh;
   padding-top: 20px;
@@ -159,7 +160,13 @@ a:hover {
   background-color: var(--article-title-red);
   padding-left: 5px;
   padding-top: 8px;
+
   color: white;
+}
+
+.article-title p {
+  margin: 0px;
+  animation: fromRToL ease-in 1s;
 }
 
 .article-body {
@@ -218,7 +225,42 @@ a:hover {
   background-color: var(--bg-light-grey);
 }
 
-/* ---------------------------- */
+/* --------------Keyframes-------------- */
+
+@keyframes fallFromTop {
+  0% {
+    opacity: 0%;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fromLToR {
+  0% {
+    opacity: 0%;
+    transform: translateX(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fromRToL {
+  0% {
+    opacity: 0%;
+    transform: translateX(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+/* --------------Media Query-------------- */
 
 @media screen and (max-width: 768px) {
   .box-2 {
