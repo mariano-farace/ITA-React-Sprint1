@@ -1,0 +1,288 @@
+:root {
+  --bg-grey: #d8d7d7;
+  --bg-light-grey: #f5f1f1;
+  --navigation-icon-grey: #808080;
+  --main-title-orange: rgb(244, 155, 122, 0.9);
+  --date-text: #eada8f;
+  --article-title-red: #f08080;
+  --article-body-text-grey: #585858;
+  --article-link-text-grey: #959494;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0px auto;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 225px auto auto;
+}
+
+/* Box-1 */
+
+.box-1 {
+  grid-column: 1 / 3;
+  background-image: url("../assets/header.jpg");
+  background-size: auto 350%;
+  background-repeat: no-repeat;
+  background-position: 50% 52%;
+  grid-template-columns: auto auto;
+  grid-template-rows: 225px 300px 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-1 {
+  padding: 20px;
+  padding-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fromLToR 1s ease-in;
+}
+
+div.section-1 > * {
+  flex: 1;
+}
+
+#a2 {
+  flex: 5;
+}
+
+.nav-items,
+.social-link-list {
+  /* TODO cuando haces shrink los iconos se apila mucho, y despues pasan a tener el texto abajo, tenes que hacer que eso pase antes de que se apilen tanto */
+  font-size: 0.9em;
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  animation: fallFromTop 1s ease-in;
+}
+
+a {
+  color: var(--navigation-icon-grey);
+  text-decoration: none;
+  padding-inline-start: 0px;
+}
+
+a:hover {
+  color: var(--article-title-red);
+}
+
+.section-2 {
+  flex: 1 1 auto;
+  padding: 0px 20px 0px 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.transparent-rectangle {
+  font-family: "IM Fell Great Primer", serif;
+  width: 95%;
+  height: 45%;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--main-title-orange);
+  font-size: 4vh;
+  padding-top: 20px;
+}
+
+/* Box-2 */
+
+.box-2 {
+  background-color: var(--bg-grey);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 15px;
+  padding: 8px;
+}
+
+.article {
+  position: relative;
+  background-color: var(--bg-light-grey);
+  padding: 10px;
+}
+
+.pic-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/1;
+}
+
+.article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pic-date {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: var(--date-text);
+  font-size: 0.75em;
+  font-weight: 550;
+}
+
+.article-title {
+  font-family: "Inconsolata", monospace;
+  font-size: 1em;
+  font-weight: 550;
+  background-color: var(--article-title-red);
+  padding-left: 5px;
+  padding-top: 8px;
+  color: white;
+}
+
+.article-title p {
+  margin: 0px;
+  animation: fromRToL ease-in 1s;
+}
+
+.article-body {
+  column-count: 2;
+  font-size: 0.73em;
+  font-weight: 300;
+  column-gap: 15px;
+  margin: 20px 5px;
+  color: var(--article-body-text-grey);
+}
+
+.article-link {
+  margin-left: 5px;
+  color: var(--article-link-text-grey);
+}
+
+.articles-footer {
+  grid-column: 1 / 3;
+  text-align: center;
+  font-size: 0.73em;
+}
+
+/* Box-3 */
+
+.box-3 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg-grey);
+  flex: 2;
+}
+.articles-footer {
+  text-align: center;
+  font-size: 0.73em;
+}
+
+.rc-title {
+  font-weight: 800;
+  margin: 10px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.rc-body {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* Box-4 */
+
+.box-4 {
+  grid-column: 1 / 3;
+  background-color: var(--bg-grey);
+  padding: 0px 8px;
+}
+
+.footer-text {
+  font-size: 0.73em;
+  color: #585858;
+  text-align: center;
+  padding: 5px 0px;
+  background-color: var(--bg-light-grey);
+}
+
+/* --------------Keyframes-------------- */
+
+@keyframes fallFromTop {
+  0% {
+    opacity: 0%;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fromLToR {
+  0% {
+    opacity: 0%;
+    transform: translateX(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fromRToL {
+  0% {
+    opacity: 0%;
+    transform: translateX(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+/* --------------Media Query-------------- */
+@media screen and (max-width: 768px) {
+  .main-container {
+    grid-template-columns: auto;
+    grid-template-rows: 225px auto auto;
+  }
+  .box-2,
+  .box-3 {
+    grid-column: 1 / 3;
+  }
+  .box-3 {
+    padding-top: 0px;
+  }
+  .transparent-rectangle {
+    font-size: 3vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .article {
+    grid-column: 1 / 3;
+  }
+
+  .section-1 {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  .transparent-rectangle {
+    font-size: 2vh;
+  }
+}
